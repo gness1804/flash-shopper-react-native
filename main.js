@@ -30,6 +30,7 @@ class Main extends Component {
     };
   this.props.addNewItem(newItem);
   this.setState(this.state)
+  this.setState({ name: '' })
   this.clearText('itemInput', 'aisleInput', 'noteInput', 'quantityInput');
   }
 
