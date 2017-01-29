@@ -30,6 +30,11 @@ class Main extends Component {
     };
   this.props.addNewItem(newItem);
   this.setState(this.state)
+  this.clearText('itemInput');
+  }
+
+  clearText(fieldName){
+    this.refs[fieldName].setNativeProps({text: ''});
   }
 
   deleteItem(id){
@@ -76,6 +81,7 @@ class Main extends Component {
         id="item-input"
         value={this.state.name}
         style={styles.inputField}
+        ref={'itemInput'}
         placeholder="Item Name"
         onChangeText={(name) => this.setState({name})}
       />
