@@ -17,7 +17,7 @@ export default class FlashShopper extends Component {
 
   addNewItem(newItem){
     this.state.items.push(newItem);
-    console.log('new state on click', this.state.items);
+    // console.log('new state on click', this.state.items);
   }
 
   deleteItem = (id) => {
@@ -25,12 +25,18 @@ export default class FlashShopper extends Component {
         return item.id !== id;
       })
       this.setState({ items: newArr });
-    console.log('new state on filter', this.state.items);
+    // console.log('new state on filter', this.state.items);
+  }
+
+  sortByAisle(){
+    // console.log(this.state);
+    let newArr = this.state.items.sort((a, b) => {return a.aisle - b.aisle });
+    this.setState({ items: newArr });
   }
 
   render() {
 
-    console.log('state in render function', this.state.items);
+    // console.log('state in render function', this.state.items);
 
     let output;
 
@@ -46,7 +52,8 @@ export default class FlashShopper extends Component {
         <Main
           addNewItem={this.addNewItem.bind(this)}
           items={this.state.items}
-          deleteItem={this.deleteItem}></Main>
+          deleteItem={this.deleteItem}
+          sortByAisle={this.sortByAisle.bind(this)}></Main>
       </View>
     );
   }

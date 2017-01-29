@@ -33,17 +33,26 @@ class Main extends Component {
       id: Date.now(),
     };
   this.props.addNewItem(newItem);
+  // this.setState({ name: '' });
+  // this.setState({ aisle: '' });
+  // this.setState({ note: '' });
+  // this.setState({ quantity: null });
+  // this.setState({ id: null });
   }
 
   deleteItem(id){
     this.props.deleteItem(id);
   }
 
+  sortByAisle(){
+    this.props.sortByAisle();
+  }
+
   render() {
 
   const { name, aisle, note, quantity, id } = this.state;
   const { items } = this.props;
-  console.log('items prop', items);
+  // console.log('items prop', items);
 
   let itemsDisplay;
 
@@ -57,6 +66,10 @@ class Main extends Component {
       <Button
         title="Delete Item"
         onPress={() => { this.deleteItem(item.id) }}
+      />
+      <Button
+        title="Sort by Aisle Item"
+        onPress={() => { this.sortByAisle() }}
       />
       </View>
     })
