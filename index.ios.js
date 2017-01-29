@@ -22,7 +22,7 @@ export default class FlashShopper extends Component {
 
   render() {
 
-    console.log('state', this.state.items);
+    console.log('state in render function', this.state.items);
 
     let output;
 
@@ -35,7 +35,7 @@ export default class FlashShopper extends Component {
         <Text>
           Flash Shopper
         </Text>
-        <Main addNewItem={this.addNewItem.bind(this)}></Main>
+        <Main addNewItem={this.addNewItem.bind(this)} items={this.state.items}></Main>
       </View>
     );
   }

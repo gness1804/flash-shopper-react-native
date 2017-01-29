@@ -20,6 +20,10 @@ class Main extends Component {
     }
   }
 
+  componentWillUpdate(){
+    console.log('main updated');
+  }
+
   createItem(){
     const newItem = {
       name: this.state.name,
@@ -28,12 +32,23 @@ class Main extends Component {
       quantity: this.state.quantity,
       id: Date.now(),
     };
-  this.props.addNewItem(newItem);  
+  this.props.addNewItem(newItem);
   }
 
   render() {
 
   const { name, aisle, note, quantity, id } = this.state;
+  const { items } = this.props;
+  console.log('items prop', items);
+
+  let itemsDisplay;
+
+  if (items.length > 0) {
+    itemsDisplay =
+    <View id="items-master-container">
+    <Text>I am a test.</Text>
+    </View>
+  }
     return (
       <View style={styles.mainView}>
       <TextInput
@@ -68,6 +83,7 @@ class Main extends Component {
         title="Submit"
         onPress={(name, aisle, note, quantity) => { this.createItem(name, aisle, note, quantity) }}
       />
+      {itemsDisplay}
     </View>
 
     );
