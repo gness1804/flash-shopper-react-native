@@ -30,11 +30,18 @@ class Main extends Component {
     };
   this.props.addNewItem(newItem);
   this.setState(this.state)
-  this.clearText('itemInput');
+  this.clearText('itemInput', 'aisleInput', 'noteInput', 'quantityInput');
   }
 
-  clearText(fieldName){
-    this.refs[fieldName].setNativeProps({text: ''});
+  clearText(itemInput, aisleInput, noteInput, quantityInput){
+    this.refs[itemInput].setNativeProps({text: ''});
+    this.refs[aisleInput].setNativeProps({text: ''});
+    this.refs[noteInput].setNativeProps({text: ''});
+    this.refs[quantityInput].setNativeProps({text: ''});
+  }
+
+  deleteAllItems(){
+    this.props.deleteAllItems();
   }
 
   deleteItem(id){
@@ -58,7 +65,7 @@ class Main extends Component {
 
   if (items.length > 0) {
     itemsDisplay = items.map((item) => {
-      return <View id="items-master-container">
+      return <View id="items-master-container" key={item.id}>
       <Text>Item: {item.name}</Text>
       <Text>Aisle: {item.aisle}</Text>
       <Text>Note: {item.note}</Text>
@@ -89,6 +96,7 @@ class Main extends Component {
         id="aisle-input"
         value={this.state.aisle}
         style={styles.inputField}
+        ref={'aisleInput'}
         placeholder="Aisle Name"
         onChangeText={(aisle) => this.setState({aisle})}
       />
@@ -96,6 +104,7 @@ class Main extends Component {
         id="note-input"
         value={this.state.note}
         style={styles.inputField}
+        ref={'noteInput'}
         placeholder="Note"
         onChangeText={(note) => this.setState({note})}
       />
@@ -103,12 +112,17 @@ class Main extends Component {
         id="quantity-input"
         value={this.state.quantity}
         style={styles.inputField}
+        ref={'quantityInput'}
         placeholder="Quantity"
         onChangeText={(quantity) => this.setState({quantity})}
       />
       <Button
         title="Submit"
         onPress={(name, aisle, note, quantity) => { this.createItem(name, aisle, note, quantity) }}
+      />
+      <Button
+        title="Delete ALL Items"
+        onPress={() => { this.deleteAllItems() }}
       />
       {itemsDisplay}
     </View>

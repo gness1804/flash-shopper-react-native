@@ -20,6 +20,10 @@ export default class FlashShopper extends Component {
     this.state.items.push(newItem);
   }
 
+  deleteAllItems = () => {
+    this.setState({ items: [] });
+  }
+
   deleteItem = (id) => {
     let newArr = this.state.items.filter((item) => {
         return item.id !== id;
@@ -34,12 +38,6 @@ export default class FlashShopper extends Component {
 
   render() {
 
-    let output;
-
-    if (this.state.items.length > 1) {
-      console.log('more than 1');
-    }
-
     return (
       <View style={styles.container}>
         <Text>
@@ -50,6 +48,7 @@ export default class FlashShopper extends Component {
           items={this.state.items}
           deleteItem={this.deleteItem}
           sortByAisle={this.sortByAisle.bind(this)}
+          deleteAllItems={this.deleteAllItems}
           >
         </Main>
       </View>
