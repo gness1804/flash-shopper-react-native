@@ -1,0 +1,26 @@
+dependencies: \
+  /Users/grahamnessler/Desktop/grocery-list-new-attempt/FlashShopper/node_modules/react-native/React/Base/RCTJavaScriptLoader.mm \
+  /Users/grahamnessler/Desktop/grocery-list-new-attempt/FlashShopper/node_modules/react-native/React/Base/RCTJavaScriptLoader.h \
+  /Users/grahamnessler/Desktop/grocery-list-new-attempt/FlashShopper/node_modules/react-native/React/Base/RCTDefines.h \
+  /Users/grahamnessler/Desktop/grocery-list-new-attempt/FlashShopper/ios/build/Build/Products/Debug-iphonesimulator/include/cxxreact/JSBundleType.h \
+  /Users/grahamnessler/Desktop/grocery-list-new-attempt/FlashShopper/ios/build/Build/Products/Debug-iphonesimulator/include/jschelpers/JavaScriptCore.h \
+  /Users/grahamnessler/Desktop/grocery-list-new-attempt/FlashShopper/ios/build/Build/Products/Debug-iphonesimulator/include/jschelpers/JSCWrapper.h \
+  /Users/grahamnessler/Desktop/grocery-list-new-attempt/FlashShopper/node_modules/react-native/React/Base/RCTBridge.h \
+  /Users/grahamnessler/Desktop/grocery-list-new-attempt/FlashShopper/node_modules/react-native/React/Base/RCTBridgeDelegate.h \
+  /Users/grahamnessler/Desktop/grocery-list-new-attempt/FlashShopper/node_modules/react-native/React/Base/RCTBridgeModule.h \
+  /Users/grahamnessler/Desktop/grocery-list-new-attempt/FlashShopper/node_modules/react-native/React/Base/RCTFrameUpdate.h \
+  /Users/grahamnessler/Desktop/grocery-list-new-attempt/FlashShopper/node_modules/react-native/React/Base/RCTInvalidating.h \
+  /Users/grahamnessler/Desktop/grocery-list-new-attempt/FlashShopper/node_modules/react-native/React/Base/RCTConvert.h \
+  /Users/grahamnessler/Desktop/grocery-list-new-attempt/FlashShopper/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/Yoga.h \
+  /Users/grahamnessler/Desktop/grocery-list-new-attempt/FlashShopper/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/YGEnums.h \
+  /Users/grahamnessler/Desktop/grocery-list-new-attempt/FlashShopper/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/YGMacros.h \
+  /Users/grahamnessler/Desktop/grocery-list-new-attempt/FlashShopper/node_modules/react-native/React/Views/RCTAnimationType.h \
+  /Users/grahamnessler/Desktop/grocery-list-new-attempt/FlashShopper/node_modules/react-native/React/Views/RCTBorderStyle.h \
+  /Users/grahamnessler/Desktop/grocery-list-new-attempt/FlashShopper/node_modules/react-native/React/Base/RCTLog.h \
+  /Users/grahamnessler/Desktop/grocery-list-new-attempt/FlashShopper/node_modules/react-native/React/Base/RCTAssert.h \
+  /Users/grahamnessler/Desktop/grocery-list-new-attempt/FlashShopper/node_modules/react-native/React/Views/RCTPointerEvents.h \
+  /Users/grahamnessler/Desktop/grocery-list-new-attempt/FlashShopper/node_modules/react-native/React/Views/RCTTextDecorationLineType.h \
+  /Users/grahamnessler/Desktop/grocery-list-new-attempt/FlashShopper/node_modules/react-native/React/Base/RCTMultipartDataTask.h \
+  /Users/grahamnessler/Desktop/grocery-list-new-attempt/FlashShopper/node_modules/react-native/React/Base/RCTMultipartStreamReader.h \
+  /Users/grahamnessler/Desktop/grocery-list-new-attempt/FlashShopper/node_modules/react-native/React/Base/RCTPerformanceLogger.h \
+  /Users/grahamnessler/Desktop/grocery-list-new-attempt/FlashShopper/node_modules/react-native/React/Base/RCTUtils.h
