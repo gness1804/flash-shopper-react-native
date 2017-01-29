@@ -126,6 +126,7 @@ class Main extends Component {
       <Button
         title="Delete ALL Items"
         onPress={() => { this.deleteAllItems() }}
+        disabled={this.props.items.length === 0}
       />
       {itemsDisplay}
     </View>
