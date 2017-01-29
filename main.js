@@ -33,11 +33,6 @@ class Main extends Component {
       id: Date.now(),
     };
   this.props.addNewItem(newItem);
-  // this.setState({ name: '' });
-  // this.setState({ aisle: '' });
-  // this.setState({ note: '' });
-  // this.setState({ quantity: null });
-  // this.setState({ id: null });
   }
 
   deleteItem(id){
@@ -46,6 +41,10 @@ class Main extends Component {
 
   sortByAisle(){
     this.props.sortByAisle();
+  }
+
+  sortAlpha(){
+    this.props.sortAlpha();
   }
 
   render() {
@@ -68,8 +67,12 @@ class Main extends Component {
         onPress={() => { this.deleteItem(item.id) }}
       />
       <Button
-        title="Sort by Aisle Item"
+        title="Sort by Aisle"
         onPress={() => { this.sortByAisle() }}
+      />
+      <Button
+        title="Sort Alpha"
+        onPress={() => { this.sortAlpha() }}
       />
       </View>
     })
