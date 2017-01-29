@@ -6,6 +6,7 @@ import {
   TextInput,
   View,
   Button,
+  ScrollView,
 } from 'react-native';
 
 class Main extends Component {
@@ -66,17 +67,19 @@ class Main extends Component {
 
   if (items.length > 0) {
     itemsDisplay = items.map((item) => {
-      return <View id="items-master-container" key={item.id}>
-      <Text>Item: {item.name}</Text>
-      <Text>Aisle: {item.aisle}</Text>
-      <Text>Note: {item.note}</Text>
-      <Text>Quantity: {item.quantity}</Text>
+      return <View style={styles.eachItemContainer} key={item.id}>
+      <Text style={styles.text}>Item: {item.name}</Text>
+      <Text style={styles.text}>Aisle: {item.aisle}</Text>
+      <Text style={styles.text}>Note: {item.note}</Text>
+      <Text style={styles.text}>Quantity: {item.quantity}</Text>
       <Button
         title="Delete Item"
+        style={styles.redButtons}
         onPress={() => { this.deleteItem(item.id) }}
       />
       <Button
         title="Sort by Aisle"
+        style={styles.greenButtons}
         onPress={() => { this.sortByAisle() }}
       />
       </View>
@@ -84,7 +87,7 @@ class Main extends Component {
   }
 
     return (
-      <View style={styles.mainView}>
+      <ScrollView style={styles.mainView}>
       <TextInput
         id="item-input"
         value={this.state.name}
@@ -125,11 +128,12 @@ class Main extends Component {
       />
       <Button
         title="Delete ALL Items"
+        style={styles.redButtons}
         onPress={() => { this.deleteAllItems() }}
         disabled={this.props.items.length === 0}
       />
       {itemsDisplay}
-    </View>
+    </ScrollView>
 
     );
   }
@@ -139,6 +143,12 @@ class Main extends Component {
 const styles = StyleSheet.create({
   mainView: {
 
+  },
+  eachItemContainer: {
+    backgroundColor: '#ffffff',
+    borderColor: 'black',
+    borderWidth: 1,
+    marginTop: 20,
   },
   inputField: {
     borderColor: 'black',
@@ -150,7 +160,16 @@ const styles = StyleSheet.create({
   },
   greenButtons: {
     color: 'rgb(160, 236, 175);',
+    marginTop: 10,
   },
+  redButtons: {
+    color: 'rgb(255, 0, 0);',
+    marginTop: 10,
+  },
+  text: {
+    marginTop: 10,
+    textAlign: 'center',
+  }
 })
 
 export default Main;

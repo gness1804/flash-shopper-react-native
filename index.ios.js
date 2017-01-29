@@ -3,7 +3,7 @@ import {
   AppRegistry,
   StyleSheet,
   Text,
-  View
+  View,
 } from 'react-native';
 import Main from './main';
 import { sortBy } from 'lodash';
@@ -66,6 +66,7 @@ const styles = StyleSheet.create({
   text: {
     fontFamily: 'Helvetica-Bold',
     fontSize: 40,
+    marginTop: 30,
   },
 });
 
