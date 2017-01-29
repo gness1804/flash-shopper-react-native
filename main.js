@@ -20,10 +20,6 @@ class Main extends Component {
     }
   }
 
-  componentWillUpdate(){
-    console.log('main updated');
-  }
-
   createItem(){
     const newItem = {
       name: this.state.name,
@@ -33,6 +29,7 @@ class Main extends Component {
       id: Date.now(),
     };
   this.props.addNewItem(newItem);
+  this.setState(this.state)
   }
 
   deleteItem(id){
@@ -51,7 +48,6 @@ class Main extends Component {
 
   const { name, aisle, note, quantity, id } = this.state;
   const { items } = this.props;
-  // console.log('items prop', items);
 
   let itemsDisplay;
 
@@ -69,10 +65,6 @@ class Main extends Component {
       <Button
         title="Sort by Aisle"
         onPress={() => { this.sortByAisle() }}
-      />
-      <Button
-        title="Sort Alpha"
-        onPress={() => { this.sortAlpha() }}
       />
       </View>
     })

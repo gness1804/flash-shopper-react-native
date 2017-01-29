@@ -6,6 +6,7 @@ import {
   View
 } from 'react-native';
 import Main from './main';
+import { sortBy } from 'lodash';
 
 export default class FlashShopper extends Component {
   constructor(){
@@ -31,11 +32,6 @@ export default class FlashShopper extends Component {
     this.setState({ items: newArr });
   }
 
-  sortAlpha(){
-    let newArr = this.state.items.sort((a, b) => {return a.name - b.name });
-    this.setState({ items: newArr });
-  }
-
   render() {
 
     let output;
@@ -54,7 +50,6 @@ export default class FlashShopper extends Component {
           items={this.state.items}
           deleteItem={this.deleteItem}
           sortByAisle={this.sortByAisle.bind(this)}
-          sortAlpha={this.sortAlpha.bind(this)}
           >
         </Main>
       </View>
