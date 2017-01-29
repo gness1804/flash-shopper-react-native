@@ -40,7 +40,7 @@ export default class FlashShopper extends Component {
 
     return (
       <View style={styles.container}>
-        <Text>
+        <Text style={styles.text}>
           Flash Shopper
         </Text>
         <Main
@@ -61,7 +61,11 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#F5FCFF',
+    backgroundColor: 'rgb(134, 148, 247)',
+  },
+  text: {
+    fontFamily: 'Helvetica-Bold',
+    fontSize: 40,
   },
 });
 
