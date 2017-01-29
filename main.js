@@ -17,7 +17,6 @@ class Main extends Component {
       note: '',
       quantity: null,
       id: null,
-      submitDisabled: true,
     }
   }
 
@@ -59,7 +58,7 @@ class Main extends Component {
 
   render() {
 
-  const { name, aisle, note, quantity, id, submitDisabled } = this.state;
+  const { name, aisle, note, quantity, id } = this.state;
   const { items } = this.props;
 
   let itemsDisplay;
@@ -120,7 +119,7 @@ class Main extends Component {
       <Button
       title="Submit"
       style={styles.greenButtons}
-      disabled={submitDisabled}
+      disabled={!this.state.name}
       onPress={(name, aisle, note, quantity) => { this.createItem(name, aisle, note, quantity) }}
       />
       <Button
