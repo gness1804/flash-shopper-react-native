@@ -5,7 +5,7 @@ import {
   Text,
   TextInput,
   View,
-  Button
+  Button,
 } from 'react-native';
 
 class Main extends Component {
@@ -17,6 +17,7 @@ class Main extends Component {
       note: '',
       quantity: null,
       id: null,
+      submitDisabled: true,
     }
   }
 
@@ -58,7 +59,7 @@ class Main extends Component {
 
   render() {
 
-  const { name, aisle, note, quantity, id } = this.state;
+  const { name, aisle, note, quantity, id, submitDisabled } = this.state;
   const { items } = this.props;
 
   let itemsDisplay;
@@ -117,8 +118,10 @@ class Main extends Component {
         onChangeText={(quantity) => this.setState({quantity})}
       />
       <Button
-        title="Submit"
-        onPress={(name, aisle, note, quantity) => { this.createItem(name, aisle, note, quantity) }}
+      title="Submit"
+      style={styles.greenButtons}
+      disabled={submitDisabled}
+      onPress={(name, aisle, note, quantity) => { this.createItem(name, aisle, note, quantity) }}
       />
       <Button
         title="Delete ALL Items"
@@ -143,7 +146,10 @@ const styles = StyleSheet.create({
     margin: 15,
     padding: 10,
     width: 250,
-  }
+  },
+  greenButtons: {
+    color: 'rgb(160, 236, 175);',
+  },
 })
 
 export default Main;
