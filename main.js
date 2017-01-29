@@ -35,6 +35,10 @@ class Main extends Component {
   this.props.addNewItem(newItem);
   }
 
+  deleteItem(id){
+    this.props.deleteItem(id);
+  }
+
   render() {
 
   const { name, aisle, note, quantity, id } = this.state;
@@ -44,11 +48,20 @@ class Main extends Component {
   let itemsDisplay;
 
   if (items.length > 0) {
-    itemsDisplay =
-    <View id="items-master-container">
-    <Text>I am a test.</Text>
-    </View>
+    itemsDisplay = items.map((item) => {
+      return <View id="items-master-container">
+      <Text>Item: {item.name}</Text>
+      <Text>Aisle: {item.aisle}</Text>
+      <Text>Note: {item.note}</Text>
+      <Text>Quantity: {item.quantity}</Text>
+      <Button
+        title="Delete Item"
+        onPress={() => { this.deleteItem(item.id) }}
+      />
+      </View>
+    })
   }
+
     return (
       <View style={styles.mainView}>
       <TextInput

@@ -20,6 +20,14 @@ export default class FlashShopper extends Component {
     console.log('new state on click', this.state.items);
   }
 
+  deleteItem = (id) => {
+    let newArr = this.state.items.filter((item) => {
+        return item.id !== id;
+      })
+      this.setState({ items: newArr });
+    console.log('new state on filter', this.state.items);
+  }
+
   render() {
 
     console.log('state in render function', this.state.items);
@@ -35,7 +43,10 @@ export default class FlashShopper extends Component {
         <Text>
           Flash Shopper
         </Text>
-        <Main addNewItem={this.addNewItem.bind(this)} items={this.state.items}></Main>
+        <Main
+          addNewItem={this.addNewItem.bind(this)}
+          items={this.state.items}
+          deleteItem={this.deleteItem}></Main>
       </View>
     );
   }
