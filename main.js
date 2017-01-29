@@ -28,7 +28,7 @@ class Main extends Component {
       quantity: this.state.quantity,
       id: Date.now(),
     };
-    console.log(newItem)
+  this.props.addNewItem(newItem);  
   }
 
   render() {

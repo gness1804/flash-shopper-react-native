@@ -8,13 +8,34 @@ import {
 import Main from './main';
 
 export default class FlashShopper extends Component {
+  constructor(){
+    super()
+    this.state = {
+      items: [],
+    }
+  }
+
+  addNewItem(newItem){
+    this.state.items.push(newItem);
+    console.log('new state on click', this.state.items);
+  }
+
   render() {
+
+    console.log('state', this.state.items);
+
+    let output;
+
+    if (this.state.items.length > 1) {
+      console.log('more than 1');
+    }
+
     return (
       <View style={styles.container}>
-        <Text style={styles.welcome}>
+        <Text>
           Flash Shopper
         </Text>
-        <Main></Main>
+        <Main addNewItem={this.addNewItem.bind(this)}></Main>
       </View>
     );
   }
@@ -26,16 +47,6 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: '#F5FCFF',
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
   },
 });
 
