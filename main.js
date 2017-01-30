@@ -54,10 +54,6 @@ class Main extends Component {
     this.props.sortByAisle();
   }
 
-  sortAlpha(){
-    this.props.sortAlpha();
-  }
-
   render() {
 
   const { name, aisle, note, quantity, id } = this.state;
@@ -82,7 +78,7 @@ class Main extends Component {
   }
 
     return (
-      <ScrollView style={styles.mainView}>
+      <ScrollView>
       <TextInput
         id="item-input"
         value={this.state.name}
@@ -142,9 +138,6 @@ class Main extends Component {
 }
 
 const styles = StyleSheet.create({
-  mainView: {
-
-  },
   eachItemContainer: {
     backgroundColor: '#ffffff',
     borderColor: 'black',
@@ -155,7 +148,7 @@ const styles = StyleSheet.create({
     borderColor: 'black',
     borderWidth: 1,
     height: 30,
-    margin: 15,
+    margin: 10,
     padding: 10,
     width: 250,
   },

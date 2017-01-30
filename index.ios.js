@@ -4,7 +4,6 @@ import {
   StyleSheet,
   Text,
   View,
-  AsyncStorage,
 } from 'react-native';
 
 import Main from './main';
@@ -19,14 +18,9 @@ export default class FlashShopper extends Component {
 
   addNewItem(newItem){
     this.state.items.push(newItem);
-    try {
-      AsyncStorage.setItem('@items', JSON.stringify(this.state.items));
-    } catch (e) {
-      throw new Error('There was a problem saving your data.');
-    }
   }
 
-  deleteAllItems = () => {
+  deleteAllItems(){
     this.setState({ items: [] });
   }
 
@@ -34,7 +28,7 @@ export default class FlashShopper extends Component {
     let newArr = this.state.items.filter((item) => {
         return item.id !== id;
       })
-      this.setState({ items: newArr });
+    this.setState({ items: newArr });
   }
 
   sortByAisle(){
@@ -43,14 +37,6 @@ export default class FlashShopper extends Component {
   }
 
   render() {
-
-    try {
-      let finalResponse;
-       const initValue = AsyncStorage.getItem('@items');
-       initValue.then((data) => { this.setState({ items: JSON.parse(data) }) })
-    } catch (e) {
-      throw new Error('There was a problem retrieving your data.');
-    }
 
     return (
       <View style={styles.container}>
@@ -62,7 +48,7 @@ export default class FlashShopper extends Component {
           items={this.state.items}
           deleteItem={this.deleteItem}
           sortByAisle={this.sortByAisle.bind(this)}
-          deleteAllItems={this.deleteAllItems}
+          deleteAllItems={this.deleteAllItems.bind(this)}
           >
         </Main>
       </View>
@@ -80,6 +66,7 @@ const styles = StyleSheet.create({
   text: {
     fontFamily: 'Helvetica-Bold',
     fontSize: 40,
+    marginBottom: 30,
     marginTop: 30,
   },
 });
