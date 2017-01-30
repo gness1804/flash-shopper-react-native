@@ -77,11 +77,6 @@ class Main extends Component {
         style={styles.redButtons}
         onPress={() => { this.deleteItem(item.id) }}
       />
-      <Button
-        title="Sort by Aisle"
-        style={styles.greenButtons}
-        onPress={() => { this.sortByAisle() }}
-      />
       </View>
     })
   }
@@ -125,6 +120,12 @@ class Main extends Component {
       style={styles.greenButtons}
       disabled={!this.state.name}
       onPress={(name, aisle, note, quantity) => { this.createItem(name, aisle, note, quantity) }}
+      />
+      <Button
+        title="Sort by Aisle"
+        style={styles.greenButtons}
+        disabled={this.props.items.length === 0}
+        onPress={() => { this.sortByAisle() }}
       />
       <Button
         title="Delete ALL Items"
