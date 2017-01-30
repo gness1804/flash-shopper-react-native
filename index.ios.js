@@ -4,9 +4,10 @@ import {
   StyleSheet,
   Text,
   View,
+  AsyncStorage,
 } from 'react-native';
+
 import Main from './main';
-import { sortBy } from 'lodash';
 
 export default class FlashShopper extends Component {
   constructor(){
@@ -18,6 +19,11 @@ export default class FlashShopper extends Component {
 
   addNewItem(newItem){
     this.state.items.push(newItem);
+    try {
+      AsyncStorage.setItem('@items', JSON.stringify(this.state.items));
+    } catch (e) {
+      throw new Error('There was a problem saving your data.');
+    }
   }
 
   deleteAllItems = () => {
@@ -37,6 +43,14 @@ export default class FlashShopper extends Component {
   }
 
   render() {
+
+    try {
+      let finalResponse;
+       const initValue = AsyncStorage.getItem('@items');
+       initValue.then((data) => { this.setState({ items: JSON.parse(data) }) })
+    } catch (e) {
+      throw new Error('There was a problem retrieving your data.');
+    }
 
     return (
       <View style={styles.container}>
