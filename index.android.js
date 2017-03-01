@@ -1,31 +1,56 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
- */
-
 import React, { Component } from 'react';
 import {
   AppRegistry,
   StyleSheet,
   Text,
-  View
+  View,
 } from 'react-native';
 
+import Main from './main';
+
 export default class FlashShopper extends Component {
+  constructor(){
+    super()
+    this.state = {
+      items: [],
+    }
+  }
+
+  addNewItem(newItem){
+    this.state.items.push(newItem);
+  }
+
+  deleteAllItems(){
+    this.setState({ items: [] });
+  }
+
+  deleteItem = (id) => {
+    let newArr = this.state.items.filter((item) => {
+        return item.id !== id;
+      })
+    this.setState({ items: newArr });
+  }
+
+  sortByAisle(){
+    let newArr = this.state.items.sort((a, b) => {return a.aisle - b.aisle });
+    this.setState({ items: newArr });
+  }
+
   render() {
+
     return (
       <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to React Native!
+        <Text style={styles.text}>
+          Flash Shopper
         </Text>
-        <Text style={styles.instructions}>
-          To get started, edit index.android.js
-        </Text>
-        <Text style={styles.instructions}>
-          Double tap R on your keyboard to reload,{'\n'}
-          Shake or press menu button for dev menu
-        </Text>
+        <Main
+          addNewItem={this.addNewItem.bind(this)}
+          items={this.state.items}
+          deleteItem={this.deleteItem}
+          sortByAisle={this.sortByAisle.bind(this)}
+          deleteAllItems={this.deleteAllItems.bind(this)}
+          >
+        </Main>
       </View>
     );
   }
@@ -36,17 +61,13 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#F5FCFF',
+    backgroundColor: 'rgb(134, 148, 247)',
   },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
+  text: {
+    fontFamily: 'Helvetica-Bold',
+    fontSize: 40,
+    marginBottom: 30,
+    marginTop: 30,
   },
 });
 
