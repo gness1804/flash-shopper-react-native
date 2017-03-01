@@ -18,7 +18,10 @@ export default class FlashShopper extends Component {
   }
 
   addNewItem(newItem){
-    this.state.items.push(newItem);
+    this.setState({ items: [
+      ...this.state.items,
+      newItem
+    ] });
   }
 
   deleteAllItems(){
@@ -39,14 +42,18 @@ export default class FlashShopper extends Component {
 
   render() {
 
+    const { items } = this.state
+    console.log('items', items)
+
     return (
       <View style={styles.container}>
         <Text style={styles.text}>
           Flash Shopper
         </Text>
+        <Text>{items.length ? <Text>You have {items.length} items on your list.</Text> : <Text>There are no items on your list!</Text>}</Text>
         <Main
           addNewItem={this.addNewItem.bind(this)}
-          items={this.state.items}
+          items={items}
           deleteItem={this.deleteItem}
           sortByAisle={this.sortByAisle.bind(this)}
           deleteAllItems={this.deleteAllItems.bind(this)}
