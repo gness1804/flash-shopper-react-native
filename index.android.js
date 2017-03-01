@@ -1,53 +1,67 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
- */
-
 import React, { Component } from 'react';
 import {
   AppRegistry,
   StyleSheet,
   Text,
-  View
+  View,
 } from 'react-native';
 
+import Main from './main';
+import styles from './styles/index-styles'
+
 export default class FlashShopper extends Component {
+  constructor(){
+    super()
+    this.state = {
+      items: [],
+    }
+  }
+
+  addNewItem(newItem){
+    this.setState({ items: [
+      ...this.state.items,
+      newItem
+    ] });
+  }
+
+  deleteAllItems(){
+    this.setState({ items: [] });
+  }
+
+  deleteItem = (id) => {
+    let newArr = this.state.items.filter((item) => {
+        return item.id !== id;
+      })
+    this.setState({ items: newArr });
+  }
+
+  sortByAisle(){
+    let newArr = this.state.items.sort((a, b) => {return a.aisle - b.aisle });
+    this.setState({ items: newArr });
+  }
+
   render() {
+
+    const { items } = this.state
+    console.log('items', items)
+
     return (
       <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to React Native!
+        <Text style={styles.text}>
+          Flash Shopper
         </Text>
-        <Text style={styles.instructions}>
-          To get started, edit index.android.js
-        </Text>
-        <Text style={styles.instructions}>
-          Double tap R on your keyboard to reload,{'\n'}
-          Shake or press menu button for dev menu
-        </Text>
+        <Text>{items.length ? <Text>You have {items.length} items on your list.</Text> : <Text>There are no items on your list!</Text>}</Text>
+        <Main
+          addNewItem={this.addNewItem.bind(this)}
+          items={items}
+          deleteItem={this.deleteItem}
+          sortByAisle={this.sortByAisle.bind(this)}
+          deleteAllItems={this.deleteAllItems.bind(this)}
+          >
+        </Main>
       </View>
     );
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
-});
 
 AppRegistry.registerComponent('FlashShopper', () => FlashShopper);

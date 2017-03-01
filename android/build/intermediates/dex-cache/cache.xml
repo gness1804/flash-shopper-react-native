@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/Users/grahamnessler/Desktop/flash-shopper-rn-2/flash-shopper-react-native/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.40.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="2d74afead061bfd6dda3c18734ebcf3fe0d84a7c">
+        <dex dex="/Users/grahamnessler/Desktop/flash-shopper-rn-2/flash-shopper-react-native/android/app/build/intermediates/pre-dexed/debug/classes-f00d376832fb073db0a7a36a7da38531ae39bc96.jar" />
+    </item>
+    <item
+        jar="/Users/grahamnessler/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/23.2.1/support-annotations-23.2.1.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="ccb693bc0774fcb637246f7360de25b4af7df318">
+        <dex dex="/Users/grahamnessler/Desktop/flash-shopper-rn-2/flash-shopper-react-native/android/app/build/intermediates/pre-dexed/debug/support-annotations-23.2.1-19c85b8158b3d1556d6c60795a20768d705674d1.jar" />
+    </item>
+    <item
+        jar="/Users/grahamnessler/.gradle/caches/modules-2/files-2.1/com.google.code.findbugs/jsr305/3.0.0/5871fb60dc68d67da54a663c3fd636a10a532948/jsr305-3.0.0.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="5871fb60dc68d67da54a663c3fd636a10a532948">
+        <dex dex="/Users/grahamnessler/Desktop/flash-shopper-rn-2/flash-shopper-react-native/android/app/build/intermediates/pre-dexed/debug/jsr305-3.0.0-1d19e76956341199d455a3bd911c055815eb6513.jar" />
+    </item>
+    <item
+        jar="/Users/grahamnessler/Desktop/flash-shopper-rn-2/flash-shopper-react-native/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.40.0/jars/libs/infer-annotations-1.5.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="dcac634e137395f79693ec760f081a86eb2bd84e">
+        <dex dex="/Users/grahamnessler/Desktop/flash-shopper-rn-2/flash-shopper-react-native/android/app/build/intermediates/pre-dexed/debug/infer-annotations-1.5-87b1e6c882a7c4a59bc7a6fa3581baeffd99a030.jar" />
+    </item>
+    <item
+        jar="/Users/grahamnessler/Desktop/flash-shopper-rn-2/flash-shopper-react-native/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline-base/0.11.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="ca63c521b5745ae9a09629d7ca67ff6bc2a967fe">
+        <dex dex="/Users/grahamnessler/Desktop/flash-shopper-rn-2/flash-shopper-react-native/android/app/build/intermediates/pre-dexed/debug/classes-5bd73ec9407f5ae520ed006e52965ee8e94e785f.jar" />
+    </item>
+    <item
+        jar="/Users/grahamnessler/Desktop/flash-shopper-rn-2/flash-shopper-react-native/android/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.0.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="4356e230a981d1bbf047d848b91bc0d9b7c5bacc">
+        <dex dex="/Users/grahamnessler/Desktop/flash-shopper-rn-2/flash-shopper-react-native/android/app/build/intermediates/pre-dexed/debug/classes-3a3f543afac1c5ffc3611cc6cb7aa8b7ae429fe0.jar" />
+    </item>
+    <item
+        jar="/Users/grahamnessler/Desktop/flash-shopper-rn-2/flash-shopper-react-native/android/app/build/intermediates/exploded-aar/com.facebook.fresco/drawee/0.11.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="1137942adeb03984c1311b662363dd38fc238fd3">
+        <dex dex="/Users/grahamnessler/Desktop/flash-shopper-rn-2/flash-shopper-react-native/android/app/build/intermediates/pre-dexed/debug/classes-868209a653bc1682e16fa48086169a29d8092b9d.jar" />
+    </item>
+    <item
+        jar="/Users/grahamnessler/Desktop/flash-shopper-rn-2/flash-shopper-react-native/android/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.2.1/jars/libs/internal_impl-23.2.1.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="607a3d0b8013b4ccbfeb0b7cb293351994e021fb">
+        <dex dex="/Users/grahamnessler/Desktop/flash-shopper-rn-2/flash-shopper-react-native/android/app/build/intermediates/pre-dexed/debug/internal_impl-23.2.1-026ee07313bceedb480737cbb47a1e6ca364cb60.jar" />
+    </item>
+    <item
+        jar="/Users/grahamnessler/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.9.0/f824591a0016efbaeddb8300bee54832a1398cfa/okio-1.9.0.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="f824591a0016efbaeddb8300bee54832a1398cfa">
+        <dex dex="/Users/grahamnessler/Desktop/flash-shopper-rn-2/flash-shopper-react-native/android/app/build/intermediates/pre-dexed/debug/okio-1.9.0-cea0d3a74bee891b0e6dc6fc182e1adf92e4a52a.jar" />
+    </item>
+    <item
+        jar="/Users/grahamnessler/Desktop/flash-shopper-rn-2/flash-shopper-react-native/android/app/build/intermediates/exploded-aar/com.facebook.soloader/soloader/0.1.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="8f615bca00639150c9eb6175d4b5471193f70794">
+        <dex dex="/Users/grahamnessler/Desktop/flash-shopper-rn-2/flash-shopper-react-native/android/app/build/intermediates/pre-dexed/debug/classes-3c400d71fa0f3dbcc60e040678ae15b369939a9b.jar" />
+    </item>
+    <item
+        jar="/Users/grahamnessler/Desktop/flash-shopper-rn-2/flash-shopper-react-native/android/app/build/intermediates/exploded-aar/com.facebook.fresco/fresco/0.11.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="d31aadf33187c37a7cd63dc1b769f8c6e33f78c3">
+        <dex dex="/Users/grahamnessler/Desktop/flash-shopper-rn-2/flash-shopper-react-native/android/app/build/intermediates/pre-dexed/debug/classes-6af3e9a336218290dbab8ff661cd14756f190282.jar" />
+    </item>
+    <item
+        jar="/Users/grahamnessler/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp-ws/3.4.1/8ace66ef7002d98f633377c9e67daeeb196d8c3b/okhttp-ws-3.4.1.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="8ace66ef7002d98f633377c9e67daeeb196d8c3b">
+        <dex dex="/Users/grahamnessler/Desktop/flash-shopper-rn-2/flash-shopper-react-native/android/app/build/intermediates/pre-dexed/debug/okhttp-ws-3.4.1-aa1c26c387f8f371a01addd8726464451cd47183.jar" />
+    </item>
+    <item
+        jar="/Users/grahamnessler/Desktop/flash-shopper-rn-2/flash-shopper-react-native/android/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.2.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="3be474b1b21b31cf2fa93fe6bd641ae108d96452">
+        <dex dex="/Users/grahamnessler/Desktop/flash-shopper-rn-2/flash-shopper-react-native/android/app/build/intermediates/pre-dexed/debug/classes-9f84965e4a5f13d36106b01dc55116335379e032.jar" />
+    </item>
+    <item
+        jar="/Users/grahamnessler/.gradle/caches/modules-2/files-2.1/com.nineoldandroids/library/2.4.0/e9b63380f3a242dbdbf103a2355ad7e43bad17cb/library-2.4.0.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="e9b63380f3a242dbdbf103a2355ad7e43bad17cb">
+        <dex dex="/Users/grahamnessler/Desktop/flash-shopper-rn-2/flash-shopper-react-native/android/app/build/intermediates/pre-dexed/debug/library-2.4.0-b948049f74ebb1483a0055f20710e322e1bf1fa0.jar" />
+    </item>
+    <item
+        jar="/Users/grahamnessler/Desktop/flash-shopper-rn-2/flash-shopper-react-native/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="d86429b0f0b3f3cafbeb78dda1b9d89119ccb05d">
+        <dex dex="/Users/grahamnessler/Desktop/flash-shopper-rn-2/flash-shopper-react-native/android/app/build/intermediates/pre-dexed/debug/classes-467623c178c92886b403090c13b76d57c4dfd00c.jar" />
+    </item>
+    <item
+        jar="/Users/grahamnessler/Desktop/flash-shopper-rn-2/flash-shopper-react-native/android/app/build/intermediates/exploded-aar/com.facebook.fresco/fbcore/0.11.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="98786c1770b531b9194fb6448b2a2692c64074b6">
+        <dex dex="/Users/grahamnessler/Desktop/flash-shopper-rn-2/flash-shopper-react-native/android/app/build/intermediates/pre-dexed/debug/classes-7a99b9377fdbe74b1f1267331339d57ecb025ef9.jar" />
+    </item>
+    <item
+        jar="/Users/grahamnessler/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp-urlconnection/3.4.1/63994437f62bc861bc20c605d12962f7246116d1/okhttp-urlconnection-3.4.1.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="63994437f62bc861bc20c605d12962f7246116d1">
+        <dex dex="/Users/grahamnessler/Desktop/flash-shopper-rn-2/flash-shopper-react-native/android/app/build/intermediates/pre-dexed/debug/okhttp-urlconnection-3.4.1-19e4e0224b24f88bac51ab15b5b6f21f1347d2af.jar" />
+    </item>
+    <item
+        jar="/Users/grahamnessler/Desktop/flash-shopper-rn-2/flash-shopper-react-native/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline-okhttp3/0.11.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="2b8a01ad9da5d26d0067894c22e87597bca2c500">
+        <dex dex="/Users/grahamnessler/Desktop/flash-shopper-rn-2/flash-shopper-react-native/android/app/build/intermediates/pre-dexed/debug/classes-7a70fff0094c9e6c1ffefe31627486ba06f6eb01.jar" />
+    </item>
+    <item
+        jar="/Users/grahamnessler/.gradle/caches/modules-2/files-2.1/javax.inject/javax.inject/1/6975da39a7040257bd51d21a231b76c915872d38/javax.inject-1.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="6975da39a7040257bd51d21a231b76c915872d38">
+        <dex dex="/Users/grahamnessler/Desktop/flash-shopper-rn-2/flash-shopper-react-native/android/app/build/intermediates/pre-dexed/debug/javax.inject-1-031bcc6253711ed84e2b1cc69c56b211c7d2b258.jar" />
+    </item>
+    <item
+        jar="/Users/grahamnessler/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-tasks/1.4.0/d85884acf6810a3bbbecb587f239005cbc846dc4/bolts-tasks-1.4.0.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="d85884acf6810a3bbbecb587f239005cbc846dc4">
+        <dex dex="/Users/grahamnessler/Desktop/flash-shopper-rn-2/flash-shopper-react-native/android/app/build/intermediates/pre-dexed/debug/bolts-tasks-1.4.0-74c0d6e14bd348c1fa94b50144776bf3a0c0c2cb.jar" />
+    </item>
+    <item
+        jar="/Users/grahamnessler/Desktop/flash-shopper-rn-2/flash-shopper-react-native/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline/0.11.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="3341b66c54367e777a0647e2db96c045329bfeab">
+        <dex dex="/Users/grahamnessler/Desktop/flash-shopper-rn-2/flash-shopper-react-native/android/app/build/intermediates/pre-dexed/debug/classes-86c81a5a23a28db0d2882678cf80a0aa24cd4922.jar" />
+    </item>
+    <item
+        jar="/Users/grahamnessler/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp/3.4.1/c7c4f9e35c2fd5900da24f9872e3971801f08ce0/okhttp-3.4.1.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="c7c4f9e35c2fd5900da24f9872e3971801f08ce0">
+        <dex dex="/Users/grahamnessler/Desktop/flash-shopper-rn-2/flash-shopper-react-native/android/app/build/intermediates/pre-dexed/debug/okhttp-3.4.1-08eb1cd8eb6153323bb04e14bbc06245afdd539c.jar" />
+    </item>
+
+</items>
