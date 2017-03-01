@@ -10,7 +10,7 @@ const styles = StyleSheet.create({
   inputField: {
     borderColor: 'black',
     borderWidth: 1,
-    height: 30,
+    height: 50,
     margin: 10,
     padding: 10,
     width: 250,
