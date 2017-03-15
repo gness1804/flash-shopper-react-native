@@ -19,6 +19,20 @@ export default class FlashShopper extends Component {
     }
   }
 
+  componentWillMount = () => {
+    AsyncStorage.getItem('items')
+      .then((items) => {
+        const parsedItems = JSON.parse(items)
+        if (!Array.isArray(parsedItems)) {
+          AsyncStorage.setItem('items', JSON.stringify([]))
+          return
+        }
+        this.setState({ storedItems: parsedItems })
+      })
+      .then(() => {this.setState({ items: this.state.storedItems })})
+      .catch((err) => { throw new Error(err) })
+  }
+
   addNewItem(newItem){
     this.setState({ items: [
       ...this.state.items,
