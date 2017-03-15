@@ -52,7 +52,12 @@ export default class FlashShopper extends Component {
     let newArr = this.state.items.filter((item) => {
         return item.id !== id;
       })
-    this.setState({ items: newArr });
+      console.log('newArr', newArr)
+      AsyncStorage.setItem('items', JSON.stringify([
+        newArr
+      ]))
+      .then(() => {this.setState({ storedItems: newArr })}).then(() => {this.setState({ items: this.state.storedItems })})
+
   }
 
   sortByAisle(){
@@ -63,7 +68,6 @@ export default class FlashShopper extends Component {
   render() {
 
     const { items } = this.state
-    console.log('items', items)
 
     return (
       <View style={styles.container}>
