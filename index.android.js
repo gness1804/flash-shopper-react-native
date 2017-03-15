@@ -4,6 +4,7 @@ import {
   StyleSheet,
   Text,
   View,
+  AsyncStorage,
 } from 'react-native';
 
 import Main from './main';
@@ -14,6 +15,7 @@ export default class FlashShopper extends Component {
     super()
     this.state = {
       items: [],
+      storedItems: [],
     }
   }
 
@@ -22,6 +24,10 @@ export default class FlashShopper extends Component {
       ...this.state.items,
       newItem
     ] });
+    AsyncStorage.setItem('items', JSON.stringify([
+      ...this.state.storedItems,
+      newItem
+    ]))
   }
 
   deleteAllItems(){
