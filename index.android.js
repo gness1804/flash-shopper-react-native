@@ -15,7 +15,6 @@ export default class FlashShopper extends Component {
     super()
     this.state = {
       items: [],
-      storedItems: [],
     }
   }
 
@@ -27,9 +26,9 @@ export default class FlashShopper extends Component {
           AsyncStorage.setItem('items', JSON.stringify([]))
           return
         }
-        this.setState({ storedItems: parsedItems })
+        return parsedItems
       })
-      .then(() => {this.setState({ items: this.state.storedItems })})
+      .then((parsedItems) => {this.setState({ items: parsedItems })})
       .catch((err) => { throw new Error(err) })
   }
 
@@ -39,7 +38,7 @@ export default class FlashShopper extends Component {
       newItem
     ] });
     AsyncStorage.setItem('items', JSON.stringify([
-      ...this.state.storedItems,
+      ...this.state.items,
       newItem
     ]))
   }
@@ -50,13 +49,12 @@ export default class FlashShopper extends Component {
 
   deleteItem = (id) => {
     let newArr = this.state.items.filter((item) => {
-        return item.id !== id;
+        return item.id !== id
       })
-      console.log('newArr', newArr)
-      AsyncStorage.setItem('items', JSON.stringify([
+      AsyncStorage.setItem('items', JSON.stringify(
         newArr
-      ]))
-      .then(() => {this.setState({ storedItems: newArr })}).then(() => {this.setState({ items: this.state.storedItems })})
+      ))
+      .then(() => {this.setState({ items: newArr })})
 
   }
 
