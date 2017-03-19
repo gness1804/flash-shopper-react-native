@@ -58,6 +58,22 @@ export default class FlashShopper extends Component {
 
   }
 
+  sortAlpha = () => {
+    let newArr = this.state.items.sort((a, b) => {
+      const first = a.name.toLowerCase()
+      const second = b.name.toLowerCase()
+      if (first < second) {
+        return -1
+      }
+      if (first > second) {
+        return 1
+      }
+      return 0
+      }
+    );
+    this.setState({ items: newArr });
+  }
+
   sortByAisle(){
     let newArr = this.state.items.sort((a, b) => {return a.aisle - b.aisle });
     this.setState({ items: newArr });
@@ -78,6 +94,7 @@ export default class FlashShopper extends Component {
           items={items}
           deleteItem={this.deleteItem}
           sortByAisle={this.sortByAisle.bind(this)}
+          sortAlpha={this.sortAlpha.bind(this)}
           deleteAllItems={this.deleteAllItems.bind(this)}
           >
         </Main>

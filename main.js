@@ -55,6 +55,10 @@ class Main extends Component {
     this.props.sortByAisle();
   }
 
+  sortAlpha(){
+    this.props.sortAlpha();
+  }
+
   render() {
 
   const { name, aisle, note, quantity, id } = this.state;
@@ -123,6 +127,12 @@ class Main extends Component {
         style={styles.greenButtons}
         disabled={this.props.items.length === 0}
         onPress={() => { this.sortByAisle() }}
+      />
+      <Button
+        title="Sort Alpha"
+        style={styles.greenButtons}
+        disabled={this.props.items.length === 0}
+        onPress={() => { this.sortAlpha() }}
       />
       <Button
         title="Delete ALL Items"
